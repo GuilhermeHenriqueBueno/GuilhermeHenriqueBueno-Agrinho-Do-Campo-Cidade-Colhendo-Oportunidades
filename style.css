@@ -1,81 +1,178 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desktop - 1</title>
-  <link rel="stylesheet" href="./style.css">
-  <style>
-    /* Global Styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: Cabin, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .parent-div {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .desktop--1-12 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    /* Styles for individual elements */
-    .rectangle-3-52717 {
-      width: 100px;
-      height: 50px;
-      background-color: #ccc;
-      margin: 10px;
-    }
-    .sobre-52725 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .list-52718 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .item-52719 {
-      width: 100px;
-      height: 50px;
-      background-color: #ccc;
-      margin: 10px;
-    }
-    .icon-52720 {
-      font-size: 24px;
-      color: #666;
-    }
-    /* Add more styles as needed */
-  </style>
-</head>
-<body>
-  <div class="parent-div">
-    <div class="desktop--1-12">
-      <div class="rectangle-3-52717"></div>
-      <div class="sobre-52725">Sobre</div>
-      <section class="list-52718">
-        <div class="item-52719">
-          <div class="icon-52720">Icon 1</div>
+<style>
+.agrinho-section { display: flex; }
+.hero { background-color: #406a42; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 12px 20px 12px 80px; color: #fff; font: 700 16px/3 Cabin, sans-serif; }
+.hero-title { margin: auto 0; }
+.hero-logo { aspect-ratio: 1.88; object-fit: contain; width: 94px; }
+.content-wrapper { background-color: #448847; }
+.content-grid { display: flex; gap: 20px; }
+.sidebar { display: flex; flex-direction: column; width: 22%; }
+.sidebar-content { display: flex; flex-direction: column; align-self: stretch; margin: auto 0; }
+.circle-group { display: flex; align-items: center; gap: 6px; margin: 0 10px; }
+.circle { background-color: #d9d9d9; border-radius: 50%; width: 30px; height: 30px; }
+.circle-sm { width: 25px; height: 25px; }
+.circle-xs { width: 20px; height: 19px; }
+.circle-xxs { width: 15px; height: 14px; }
+.circle-tiny { width: 9px; height: 9px; }
+.icon-group { display: flex; align-items: start; gap: 40px 79px; margin-top: 16px; }
+.icon { aspect-ratio: 1; object-fit: contain; width: 21px; }
+.icon-wrapper { position: relative; aspect-ratio: 1.256; width: 54px; margin-top: 5px; }
+.icon-overlay { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; }
+.sidebar-bottom { display: flex; margin-top: 16px; gap: 33px; }
+.sidebar-icon { aspect-ratio: 0.86; width: 37px; }
+.sidebar-icon-group { display: flex; flex-direction: column; flex-grow: 1; }
+.main-content { width: 43%; }
+.main-image { aspect-ratio: 1.48; object-fit: contain; width: 100%; }
+.info-section { background-color: #eaeaea; padding: 46px 80px 99px 0; }
+.info-grid { display: flex; gap: 20px; }
+.info-column { width: 50%; }
+.info-title { font-family: Roboto, sans-serif; font-size: 40px; color: #1f1e1e; font-weight: 565; background-color: rgba(58, 116, 60, 0.8); border-radius: 30px; padding: 10px 27px 17px; }
+.info-subtitle { font-family: Roboto, sans-serif; font-size: 31px; color: rgba(26, 26, 26, 0.94); font-weight: 400; margin: 12px 0 0 10px; border: 1px solid #000; }
+.info-image { aspect-ratio: 6.17; object-fit: contain; width: 100%; margin-top: 66px; }
+.objectives { font-family: Roboto, sans-serif; font-size: 25px; color: rgba(0, 0, 0, 0.74); margin-top: 183px; }
+.impact { font-family: Roboto, sans-serif; font-size: 31px; color: rgba(0, 0, 0, 0.74); width: 792px; margin: 98px 0 0 48px; }
+.footer { background-color: #46765b; padding: 0 80px 6px 12px; margin-top: -151px; }
+.footer-logo { aspect-ratio: 1.51; object-fit: contain; width: 332px; align-self: flex-end; margin-top: -60px; }
+.footer-content { display: flex; justify-content: space-between; margin-top: 86px; }
+.footer-column { font-family: Cabin, sans-serif; }
+.footer-heading { color: #fff; font: 20px/1.4 Lato, sans-serif; }
+.footer-link { border-bottom: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.8); font-size: 14px; font-weight: 700; padding: 15px 10px; width: 248px; }
+.footer-email { align-self: flex-end; margin-top: 17px; }
+.footer-disclaimer { color: #fff; font-size: 10px; font-weight: 400; line-height: 2; text-align: center; margin-top: 10px; }
+.footer-social { display: flex; gap: 3px; margin-top: 17px; }
+.social-icon { aspect-ratio: 1; object-fit: contain; width: 47px; }
+
+@media (max-width: 991px) {
+  .hero { max-width: 100%; padding-left: 20px; }
+  .content-grid, .info-grid { flex-direction: column; }
+  .sidebar, .main-content, .info-column { width: 100%; }
+  .sidebar-content { margin-top: 21px; }
+  .main-image, .info-image { max-width: 100%; margin-top: 40px; }
+  .info-section { max-width: 100%; padding-right: 20px; }
+  .info-title, .info-subtitle { max-width: 100%; }
+  .objectives, .impact { max-width: 100%; margin-top: 40px; }
+  .footer { max-width: 100%; padding-right: 20px; margin-top: 40px; }
+  .footer-content { flex-direction: column; }
+  .footer-logo, .footer-column { max-width: 100%; }
+}
+</style>
+
+<section class="agrinho-section">
+  <header class="hero">
+    <h1 class="hero-title">Sobre</h1>
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ee7d1dfd40353ac2bdfb83148df0cb7bfd39f8705b168b5595eb90d329ec9331?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="Agrinho logo" class="hero-logo" />
+  </header>
+  
+  <div class="content-wrapper">
+    <div class="content-grid">
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <div class="circle-group">
+            <div class="circle"></div>
+            <div class="circle circle-sm"></div>
+            <div class="circle circle-xs"></div>
+            <div class="circle circle-xxs"></div>
+            <div class="circle circle-tiny"></div>
+          </div>
+          <div class="icon-group">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/742efc1c81f5afb0edcf25ee9e7098d58d3975a13a02cc58c39e9e3eb83855b8?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="icon" />
+            <div class="icon-wrapper">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7fabb13346fb87a5e04f5733fa74437931a9f2cb058d4aa7ce1fc5fbd9277d05?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="icon-overlay" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7fabb13346fb87a5e04f5733fa74437931a9f2cb058d4aa7ce1fc5fbd9277d05?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="icon" />
+            </div>
+          </div>
+          <div class="sidebar-bottom">
+            <div class="sidebar-icon-group">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a370b6027ef6ae42b70bfe3ea96f85fc7fcc24f63fbdbd4bfc3919aa31e2156c?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="sidebar-icon" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a370b6027ef6ae42b70bfe3ea96f85fc7fcc24f63fbdbd4bfc3919aa31e2156c?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="sidebar-icon" />
+            </div>
+            <div class="sidebar-icon-group">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/742efc1c81f5afb0edcf25ee9e7098d58d3975a13a02cc58c39e9e3eb83855b8?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="icon" />
+              <div class="icon-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cfba83c29ca438b2af280a1637e8da26705411e320f01cdd83d1d0a525f4d98e?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="icon" />
+                <div class="circle-group">
+                  <div class="circle circle-tiny"></div>
+                  <div class="circle circle-xxs"></div>
+                  <div class="circle circle-xs"></div>
+                  <div class="circle circle-sm"></div>
+                  <div class="circle"></div>
+                  <div class="circle circle-sm"></div>
+                  <div class="circle circle-xs"></div>
+                  <div class="circle circle-xxs"></div>
+                  <div class="circle circle-tiny"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="item-52719">
-          <div class="icon-52720">Icon 2</div>
-        </div>
-        <!-- Add more items here -->
-      </section>
-      <!-- Add more content here -->
+      </aside>
+      
+      <main class="main-content">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5edaaf07b447689e1cd937548f4116d23449abf42e7d6b0c066106575bdd86f6?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="Agrinho program illustration" class="main-image" />
+      </main>
     </div>
   </div>
-  <script src="scripts.js"></script>
-</body>
-</html>
+  
+  <section class="info-section">
+    <div class="info-grid">
+      <div class="info-column">
+        <h2 class="info-title">Agrinho: Do Campo à Cidade Colhendo Oportunidades</h2>
+        <h3 class="info-subtitle">Sobre o Agrinho</h3>
+      </div>
+      <div class="info-column">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aee65c1461c4542adf7d187c9e39ef915a6ade2a259ab5dd2566c3dd31858320?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="Agrinho program logo" class="info-image" />
+      </div>
+    </div>
+    
+    <div class="info-grid">
+      <div class="info-column">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ecb2ba33731d276b1cbc788df5195e24f44e9424ddcae663400865c751191787?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="Rural and urban landscape" class="info-image" />
+      </div>
+      <div class="info-column">
+        <p class="objectives">
+          O programa Agrinho é uma iniciativa educativa que tem como objetivo conectar o campo à cidade, promovendo um entendimento mais profundo e a valorização do meio rural e suas diversas oportunidades. Por meio de atividades pedagógicas, o Agrinho estimula alunos e professores a refletirem sobre a relevância do campo para a vida urbana, destacando a importância da agricultura e das práticas sustentáveis para o desenvolvimento socioeconômico. Com o tema "Do Campo à Cidade Colhendo Oportunidades" o programa enfatiza a interdependência entre as áreas urbanas e rurais, evidenciando como essa relação pode abrir novas portas para o crescimento e a inovação de todos.
+        </p>
+        <h3 class="objectives">Objetivos do Programa</h3>
+        <ol class="objectives">
+          <li>Educação Ambiental e Rural: Ensinar crianças e adolescentes sobre a importância do meio ambiente, da agricultura e das práticas sustentáveis.</li>
+          <li>Integração Campo-Cidade: Mostrar a interdependência entre áreas urbanas e rurais, destacando como ambos os ambientes podem se beneficiar mutuamente.</li>
+          <li>Desenvolvimento Socioeconômico: Promover o entendimento de como a agricultura e o desenvolvimento rural são fundamentais para o crescimento econômico sustentável.</li>
+          <li>Conscientização e Cidadania: Incentivar os participantes a refletirem sobre seu papel como cidadãos e a importância de contribuir para uma sociedade mais equilibrada e justa.</li>
+        </ol>
+      </div>
+    </div>
+    
+    <h3 class="impact">Impacto do Programa</h3>
+    <p class="impact">O Agrinho tem um impacto positivo na educação de jovens e adultos sobre a importância do campo e das práticas sustentáveis.</p>
+  </section>
+  
+  <footer class="footer">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c35823a3011e4365d746b0ea34c64fe083c56e5a969fbaa4e885484a85fd1533?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="Decorative footer image" class="footer-logo" />
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4 class="footer-heading">Sobre</h4>
+        <a href="tel:+5541998895831" class="footer-link">Contato +55 (41) 99889-5831</a>
+        <a href="#" class="footer-link">Termos de Uso e Privacidade</a>
+        <p class="footer-email">henrique.bueno.guilherme@escola.pr.gov.br</p>
+        <p class="footer-disclaimer">imagens retiradas do Google</p>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Parceiros</h4>
+        <p class="footer-link">Guilherme Henrique Bueno</p>
+        <p class="footer-link">Profº Kenia</p>
+        <p class="footer-disclaimer">Projeto Agrinho © 2024 · R. Barão do Rio Branco, 1453 - Centro, Lapa - PR, 83750-000- Fone: 41 99889-5831</p>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Junte-se a nós!</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Visit our Facebook page">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b0c8572dcb7af5dfce2594f7d6cee51cd5a18c5db336891307784b7c39a2a083?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="social-icon" />
+          </a>
+          <a href="#" aria-label="Visit our Instagram page">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce2bc75d2a0a5aad162192b814dac93b483b2a91c7deda4aee331dd7bdcd2f4c?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="" class="social-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/48c89521b5c948d1436513873858fa3842a8c6e6269e876b6f77a23bcc1dc604?placeholderIfAbsent=true&apiKey=167cfb7ebf904fdf9b31457cf1c32e95" alt="Decorative footer image" class="footer-logo" />
+  </footer>
+</section>
