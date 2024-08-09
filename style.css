@@ -41,7 +41,7 @@
 .footer-social { display: flex; gap: 3px; margin-top: 17px; }
 .social-icon { aspect-ratio: 1; object-fit: contain; width: 47px; }
 
-@media (max-width: 991px) {
+@media (max-width: 911px ) {
   .hero { max-width: 100%; padding-left: 20px; }
   .content-grid, .info-grid { flex-direction: column; }
   .sidebar, .main-content, .info-column { width: 100%; }
